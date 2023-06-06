@@ -1,0 +1,91 @@
+a. Terminologi
+   a.1. Grid container
+        -> element pembungkus grid, didefinisikan dengan     menuliskan
+
+                    display: grid;
+
+   a.2. Grid item
+        -> element - element yang berada (1 level di dalam grid container)
+
+   a.3. Grid line
+        -> garis horizontal (kolom) atau vertikal (baris) yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka
+
+   a.4. Grid cell
+        -> perpotongan / pertemuan antara baris dan kolom di dalam grid
+
+   a.5. Grid area
+        -> kumpulan lebih dari satu grid cell yang membentuk kotak
+
+   a.6. Grid track
+        -> ukuran / jarak antara 2 grid line, bisa horizontal (kolom) atau vertikal (baris)
+
+   a.7. Grid gap
+        -> jarak antar grid track / cell
+
+b. CSS Grid Properties
+   <container>
+   b.1. grid-template-colums
+   b.2. grid-template-rows
+   b.3. grid-auto-columns
+   b.4. grid-auto-rows
+   b.5. grid-auto-flow
+   b.6. grid-template-areas
+   b.7. grid-template
+   b.8. grid-column-gap
+   b.9. grid-row-gap
+   b.10. grid-gap
+   b.11. grid
+   b.12. justify-items
+   b.13. align-items
+   b.14. place-items
+   b.15. justify-content
+   b.16. align-content
+   b.17. place-content
+   <item>
+   b.18. grid-column-start
+   b.19. grid-column-end
+   b.20. grid-row-start
+   b.21. grid-row-end
+   b.22. grid-column
+   b.23. grid-row
+   b.24. grid-area
+   b.25. justify-self
+   b.26. align-self
+   b.27. place-self
+
+c. grid-template-columns, grid-template-rows, grid-auto-columns, grid-auto-rows & grid-auto-flow
+   - mendefinisikan kolom / baris dengan cara menuliskan nilai yang dipisahkan oleh spasi
+   - nilai merepresentasikan ukuran grid track dan spasi merepresentasikan grid line
+
+
+   . container {
+   display: grid;
+   grid-template-columns: <track-size> ... | <line-name> <track-size> ...;
+   grid-template-rows: <track-size> ... | <line-name> <track-size> ...;
+   }
+
+   <track-size> : bisa berupa px, %, auto atau fr (fraction)
+   <line-name> : nama yang bisa diberikan pada track
+
+   - implicit - explicit grid
+     -> explicit didefinisikan pada grid yang didefinisikan (solid)
+     adapun item didefinisikan  dengan dash (garis putus - putus)
+     -> implicit didefinisikan pada grid yang tidak didefinisikan dengan dotted (titik putus-putus)
+     -> utk mengatur implicit grid dapat digunakan
+
+     1. grid-auto-columns
+     2. grid-auto-rows
+
+     -> grid-auto-flow
+        + mengatur penempatan item / cell pada grid track, termasuk yang ditulis secara implicit
+        + grid-auto-flow: row | column | row dense | column dense;
+
+d. Special keywords & functions
+   - terdiri dari
+     1. repeat()
+     2. min-content & max-content
+     3. minmax()
+     4. auto-fill & auto-fit
+   - repeat()
+     -> menentukan ukuran grid track secara berulang
+     ->
