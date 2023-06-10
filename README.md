@@ -1,2 +1,2 @@
-# my-programming-cook-book
-Wonderful journey to be good programmer
+# my-programming-cooking-book
+Wonderful journey to be a good programmer
