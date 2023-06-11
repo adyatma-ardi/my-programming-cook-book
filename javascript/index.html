@@ -15,6 +15,12 @@
             font-size: xx-small;
         }
     </style>
+
+    // internal script (head)
+    // tidak direkomendasikan
+    <script type="text/javascript">
+        // code...
+    </script>
 </head>
 
 <body>
@@ -135,6 +141,16 @@
             var iniBolehBanget // camelCase;
         </p>
     </section>
+
+    // internal script (akhir tag body)
+    // direkomendasikan
+    <script type="text/javascript">
+        // code...
+        console.log("internal script code!");
+    </script>
+
+    // external script
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
