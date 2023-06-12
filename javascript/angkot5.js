@@ -3,16 +3,16 @@ var noAngkot = 1,
     angkotBeroperasi = 6;
 
 // angkot
-// 1 - 6 beroperasi dengan baik (for)
+// 1, 2, 3, 4, 6 beroperasi dengan baik (for)
 // 7, 9 sedang tidak beroperasi (for)
-// 8, 10 sedang lembur
-// gunakan if else
+// 5, 8, 10 sedang lembur
+// gunakan else if
 
 for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
 
-    if (noAngkot <= 6) {
+    if (noAngkot <= 6 && noAngkot !== 5) {
         console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik');
-    } else if (noAngkot === 8 || noAngkot === 10) {
+    } else if (noAngkot === 8 || noAngkot === 10 || noAngkot === 5) {
         console.log('Angkot No. ' + noAngkot + ' sedang lembur');
     } else {
         console.log('Angkot No. ' + noAngkot + ' sedang tidak beroperasi');
