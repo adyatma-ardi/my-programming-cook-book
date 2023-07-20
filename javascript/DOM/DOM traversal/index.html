@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="contactList">
+        <div class="contact" data-contact-id="1">Kontak 1 <button class="deleteButton">Hapus</button></div>
+        <div class="contact" data-contact-id="2">Kontak 2 <button class="deleteButton">Hapus</button></div>
+        <div class="contact" data-contact-id="3">Kontak 3 <button class="deleteButton">Hapus</button></div>
+    </div>
+    <script>
+        const deleteButtons = document.querySelectorAll('.deleteButton');
+        // console.log(deleteButtons);
+
+        for (let i = 0; i < deleteButtons.length; i++) {
+            deleteButtons[i].addEventListener('click', function (e) {
+                const buttonClicked = e.target;
+                const contactId = buttonClicked.parentElement.dataset.contactId;
+                const contactToDelete = document.querySelector(`[data-contact-id="${contactId}"]`);
+
+                const contactList = document.getElementById('contactList');
+                if (contactList.childElementCount >= 2) {
+                    contactToDelete.remove();
+                    console.log(`Kontak dengan ID ${contactId} sukses dihapus`);
+                } else {
+                    console.log(`kontak dengan ID ${contactId} tidak dapat dihapus karena harus minimal dua kontak`)
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
